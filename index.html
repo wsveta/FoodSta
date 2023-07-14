@@ -206,10 +206,11 @@
               </p>
               <div class="reviewer-description">
                 <img
-                class="reviewer-image"
+                  class="reviewer-image"
                   srcset="
-                    ./images/camila-garcia.jpg 1x,
-                    ./images/camila-garcia@2.jpg 2x"
+                    ./images/camila-garcia.jpg   1x,
+                    ./images/camila-garcia@2.jpg 2x
+                  "
                   src="./images/camila-garcia.jpg"
                   alt="Sumith Shah"
                   width="48"
@@ -232,10 +233,11 @@
               </p>
               <div class="reviewer-description">
                 <img
-                class="reviewer-image"
+                  class="reviewer-image"
                   srcset="
-                    ./images/mark-guerrero.jpg 1x,
-                    ./images/mark-guerrero@2.jpg 2x"
+                    ./images/mark-guerrero.jpg   1x,
+                    ./images/mark-guerrero@2.jpg 2x
+                  "
                   src="./images/mark-guerrero.jpg"
                   alt="Sumith Shah"
                   width="48"
@@ -248,51 +250,69 @@
               </div>
             </li>
           </ul>
+          <img
+            class="customers-image"
+            srcset="./images/banan.png 1x, ./images/banan@2.png 2x"
+            src="./images/banan.png"
+            alt="banan"
+            width="280"
+            height=""
+          />
         </div>
       </section>
       <section>
-        <h2>Subscribe To Get Special Offers</h2>
-        <p>
-          Order now and receive 10 &#37; off your first meal with Enjoy Your
-          Favorite Food From Anywhere.
-        </p>
-        <form>
-          <input type="text" placeholder="Enter your email" /><button
-            type="submit"
-          >
-            Subscribe
-          </button>
-        </form>
-        <img src="./images/banan.jpg" alt="banan" width="608" height="266" />
+        <div class="container subscribe-block">
+          <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
+          <p class="subscribe-text">
+            Order now and receive 10 &#37; off your first meal with Enjoy Your
+            Favorite Food From Anywhere.
+          </p>
+          <form class="subscribe-form">
+            <input
+              class="subscribe-input"
+              type="text"
+              placeholder="Enter your email"
+            /><button class="subscribe-button" type="submit">Subscribe</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
       <section>
-        <a href="./index.html"><img src="./images/vector.svg" alt="logo" /></a>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">Menu</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <p>Subscribe</p>
-        <form>
-          <input type="text" placeholder="Enter your email" /><button
-            type="menu"
-          >
-            Subscribe
-          </button>
-        </form>
-        <p>
-          By subscribing you agree to with our <a href="">Privacy Policy</a>
-        </p>
-        <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms of Service</a></li>
-          <li><a href="">Cookies Settings</a></li>
-        </ul>
-        <p>2022 FoodSta. All right reserved.</p>
+        <div class="container footer-block">
+          <div class="menu-footer">
+            <a class="logo" href="./index.html">
+              <svg width="66" height="52">
+                <use href="./images/icons.svg#logo"></use>
+              </svg>
+            </a>
+            <ul class="menu-navs">
+              <li><a class="menu-nav" href="">Home</a></li>
+              <li><a class="menu-nav" href="">About</a></li>
+              <li><a class="menu-nav" href="">Service</a></li>
+              <li><a class="menu-nav" href="">Menu</a></li>
+              <li><a class="menu-nav" href="">Contact</a></li>
+            </ul>
+          </div>
+          <p class="form-text">Subscribe</p>
+          <form class="footer-form">
+            <input class="footer-input" type="text" placeholder="Enter your email" />
+            <button class="footer-button"
+              type="menu"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p class="footer-rules">
+            By subscribing you agree to with our <a class="footer-link" href="">Privacy Policy</a>
+          </p>
+          <ul class="footer-links">
+            <li><a class="footer-link" href="">Privacy Policy</a></li>
+            <li><a class="footer-link" href="">Terms of Service</a></li>
+            <li><a class="footer-link" href="">Cookies Settings</a></li>
+          </ul>
+          <p class="footer-rights">2022 FoodSta. All right reserved.</p>
+        </div>
       </section>
     </footer>
   </body>
