@@ -49,10 +49,10 @@
           <div class="content-wrap">
             <div class="text-wrap">
               <p class="hero-text">
-                With just a few clicks, you can have your favorite meals delivered
-                straight to your doorstep, no matter where you are. Order now and
-                enjoy a hassle-free and delicious meal from the comfort of your
-                own home.
+                With just a few clicks, you can have your favorite meals
+                delivered straight to your doorstep, no matter where you are.
+                Order now and enjoy a hassle-free and delicious meal from the
+                comfort of your own home.
               </p>
               <button class="hero-button" type="button">Order now</button>
             </div>
@@ -73,14 +73,30 @@
       </section>
       <section>
         <div class="container offerings-block">
-          <div class="image-wrap">
-            <img
-              class="offering-image"
+          <div class="apples">
+            <div class="image-wrap">
+              <img
+                class="offering-image"
+                srcset="./images/apple.png 1x, ./images/apple@2.png 2x"
+                src="./images/apple.png"
+                alt="apple"
+                width="201"
+                height="255"
+              />
+            </div>
+            <img class="second-apple"
               srcset="./images/apple.png 1x, ./images/apple@2.png 2x"
               src="./images/apple.png"
               alt="apple"
-              width="201"
-              height="255"
+              width="166"
+              height="210"
+            />
+            <img class="third-apple"
+              srcset="./images/apple.png 1x, ./images/apple@2.png 2x"
+              src="./images/apple.png"
+              alt="apple"
+              width="108"
+              height="136"
             />
           </div>
           <h2 class="main-subtitle">What's Special About Our Offerings</h2>
@@ -116,7 +132,14 @@
               </p>
             </li>
           </ul>
-          <button class="offerings-button" type="button">Order now</button>
+          <div class="offerings-nav">
+            <button class="offerings-button" type="button">Order now</button>
+            <p>Read more
+              <svg class="offerings-arrow" width="13" height="13">
+                <use href="./images/icons.svg#arrow-right"></use>
+              </svg>
+            </p>
+          </div>
         </div>
       </section>
       <section>

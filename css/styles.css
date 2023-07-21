@@ -40,7 +40,7 @@ img {
   min-width: 320px;
   max-width: 1280px;
   padding: 0 20px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .header-block {
@@ -147,7 +147,7 @@ img {
 }
 
 @media (max-width: 767px) {
-  .hero-image {
+  .hero-image, .dish-images li:nth-child(n + 4) {
     display: none;
   }
 }
@@ -210,26 +210,53 @@ img {
   padding: 10px 22px;
   justify-content: center;
   align-items: center;
-  margin-top: 28px;
 
   font-size: 13px;
   font-weight: 500;
   line-height: 150%;
 }
 
+.offerings-nav {
+  display: flex;
+  align-items: baseline;
+  margin-top: 28px;
+  gap: 24px;
+}
 .image-wrap {
   position: relative;
   display: flex;
   border: 12px solid var(--accent-btn-bg);
-  outline: 3px solid #fff4b9dd;
+  outline: 3px solid rgba(255, 255, 255, 0.5);
   background-color: #fff;
   width: 255px;
   height: 255px;
   border-radius: 50%;
   justify-content: center;
-  margin-bottom: 60px;
 }
 
+.apples {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: baseline;
+}
+.second-apple {
+  display: none;
+  opacity: 0.6;
+  margin-left: 30px;
+  padding-bottom: 67px;
+}
+.third-apple {
+  display: none;
+  opacity: 0.3;
+  margin-left: 44px;
+  padding-bottom: 67px;
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+  .second-apple,
+  .third-apple {
+    display: block;
+  }
+}
 .offering-image {
   position: absolute;
   top: -41px;
@@ -261,9 +288,7 @@ img {
   border-radius: 50%;
   padding: 29px 28px;
 }
-.dish-images li:nth-child(n + 4) {
-  display: none;
-}
+
 
 .review-block {
   padding-top: 60px;
@@ -443,6 +468,9 @@ img {
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
   .logo {
     margin-right: auto;
   }
@@ -467,15 +495,21 @@ img {
     line-height: 120%;
     width: 537px;
   }
+  .hero-text {
+    margin-top: 46px;
+    margin-bottom: 40px;
+  }
   .hero-image {
     border: 14px solid var(--accent-btn-bg);
-    margin-top: -15px;
+    margin-top: -20px;
   }
 
   .offerings-block {
     background-image: url(../images/tablet-up.svg);
-    align-items: normal;
     padding-top: 150px;
+    margin-top: -110px;
+    padding-bottom: 88px;
+    align-items: flex-start;
   }
   .offering-image {
     width: 257px;
@@ -484,5 +518,51 @@ img {
   .image-wrap {
     width: 325px;
     height: 325px;
+  }
+  .offerings {
+    flex-direction: row;
+    gap: 80px;
+    margin-right: 116px;
+    margin-bottom: 20px;
+  }
+
+  .main-subtitle {
+    font-size: 42px;
+    width: 526px;
+  }
+  .offerings-text {
+    width: 500px;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  .dishes-title {
+    font-size: 42px;
+  }
+  .dishes-text {
+    font-size: 16px;
+  }
+  .dish-images {
+    gap: 32px;
+  }
+  .dish-image {
+    border-width: 14px;
+  }
+
+  .review-block {
+    background-image: url(../images/tablet-down.svg);
+    padding-top: 60px;
+  }
+  .review-description {
+    font-size: 16px;
+  }
+  .review-cards {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .customers-image {
+    margin-left: auto;
+    margin-top: 46px;
   }
 }
