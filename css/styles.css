@@ -41,7 +41,6 @@ img {
   max-width: 1280px;
   padding: 0 20px;
   /* margin: 0 auto; */
-  
 }
 
 .header-block {
@@ -68,6 +67,14 @@ img {
   display: block;
   padding: 28px 0;
   color: var(--primary-text-color);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #bbf330;
+  font-weight: 500;
+  text-decoration-line: underline;
 }
 
 .nav-link:hover,
@@ -89,6 +96,7 @@ img {
   padding: 6px 18px;
   border: none;
   border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .header-button:hover,
@@ -98,7 +106,6 @@ img {
 
 .hero-block {
   margin-top: 60px;
-  margin-bottom: 56px;
 }
 
 .hero-title {
@@ -135,9 +142,14 @@ img {
 }
 
 .hero-image {
-  display: none;
   border: 26px solid var(--accent-btn-bg);
   border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .hero-image {
+    display: none;
+  }
 }
 
 .offerings-block {
@@ -152,15 +164,15 @@ img {
 }
 
 .main-subtitle {
+  line-height: 120%;
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 28px;
 }
 
 .offerings-text {
   font-size: 14px;
   line-height: 1.4;
-  margin-bottom: 36px;
+  margin: 28px 0;
 }
 
 .offerings {
@@ -180,7 +192,7 @@ img {
 .offering-title {
   font-size: 18px;
   font-weight: 700;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 16px;
 }
 
@@ -208,13 +220,14 @@ img {
 .image-wrap {
   position: relative;
   display: flex;
-  border: 14px solid var(--accent-btn-bg);
+  border: 12px solid var(--accent-btn-bg);
   outline: 3px solid #fff4b9dd;
   background-color: #fff;
   width: 255px;
   height: 255px;
   border-radius: 50%;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .offering-image {
@@ -241,7 +254,7 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: center;
+  justify-content: center;
 }
 .dish-image {
   border: 11px solid var(--accent-btn-bg);
@@ -259,10 +272,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.review-title {
-  font-size: 28px;
-  font-weight: 700;
-}
+
 .review-description {
   margin-top: 20px;
   margin-bottom: 32px;
@@ -310,15 +320,12 @@ img {
   line-height: 150%;
 }
 .customers-image {
+  margin-top: -43px;
 }
 
 .subscribe-block {
+  margin-top: 17px;
   margin-bottom: 60px;
-}
-.subscribe-title {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 120%;
 }
 .subscribe-text {
   margin-top: 20px;
@@ -376,6 +383,7 @@ img {
   color: #000;
 }
 .form-text {
+  margin-top: 40px;
   font-weight: 500;
   line-height: 150%;
 }
@@ -432,4 +440,49 @@ img {
 .footer-rights {
   font-size: 10px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin-right: auto;
+  }
+  .navigation,
+  .header-button,
+  .hero-image {
+    display: block;
+  }
+
+  .container.hero-block {
+    padding-left: 40px;
+    padding-right: 32px;
+  }
+  .content-wrap {
+    display: flex;
+    gap: 54px;
+    margin-bottom: -95px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 120%;
+    width: 537px;
+  }
+  .hero-image {
+    border: 14px solid var(--accent-btn-bg);
+    margin-top: -15px;
+  }
+
+  .offerings-block {
+    background-image: url(../images/tablet-up.svg);
+    align-items: normal;
+    padding-top: 150px;
+  }
+  .offering-image {
+    width: 257px;
+    height: 325px;
+  }
+  .image-wrap {
+    width: 325px;
+    height: 325px;
+  }
 }
