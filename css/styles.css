@@ -14,27 +14,42 @@ body {
   color: var(--primary-text-color);
 }
 
-a {
-  text-decoration: none;
-}
-
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
+/* Reset styles */
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
+
 
 .container {
   min-width: 320px;
@@ -45,8 +60,10 @@ img {
 
 .header-block {
   display: flex;
+  position: relative;
   align-items: center;
-  background: var(--header-bg-color);
+  background: #fefefe;
+  padding: 0 20px;
   box-shadow: 0px 4px 24px 0px rgba(105, 105, 105, 0.1);
 }
 
@@ -56,6 +73,8 @@ img {
 }
 
 .logo {
+  margin-right: auto;
+  padding: 10px 0;
 }
 
 .navigation {
@@ -102,6 +121,77 @@ img {
 .header-button:hover,
 .header-button:focus {
   background-color: var(--accent-btn-bg);
+}
+
+@media screen and (max-width: 768px) {
+  .navigation,
+  .header-btn {
+    display: none;
+  }
+
+  .hamburger {
+    fill: #7eb101;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.mobile-close-button {
+  background-color: transparent;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: hidden;
+  top: 50px;
+  right: 0;
+  width: 130px;
+  border-radius: 30px 0px 30px 30px;
+  box-shadow: 0px 4px 24px 0px rgba(105, 105, 105, 0.1);
+  background-color: #fefefe;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  margin-right: 20px;
+}
+
+.close-button {
+  display: flex;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  background: var(--accent);
+}
+
+.mobile-nav {
+  padding: 16px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.mobile-nav:active {
+  background-color: var(--accent-text-color);
 }
 
 .hero-block {

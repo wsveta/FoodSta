@@ -24,7 +24,7 @@
   </head>
   <body>
     <header>
-      <div class="container header-block">
+      <div class="header-block">
         <a class="logo" href="./index.html">
           <svg width="66" height="52">
             <use href="./images/icons.svg#logo"></use>
@@ -40,8 +40,33 @@
           </ul>
         </nav>
         <button class="header-button" type="button">Order now</button>
+        <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="hamburger" width="32px" height="22px">
+              <use href="./images/icons.svg#icon-hamburger"></use>
+            </svg>
+          </button>
       </div>
     </header>
+    <!-- Мобільне меню -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="js-close-menu close-button mobile-close-button">
+        <svg width="10" height="10">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-navs">
+        <li class="mobile-nav"><a href="./index.html">Home</a></li>
+        <li class="mobile-nav"><a href="">About</a></li>
+        <li class="mobile-nav"><a href="">Service</a></li>
+        <li class="mobile-nav"><a href="">Menu</a></li>
+        <li class="mobile-nav"><a href="">Contact</a></li>
+      </ul>
+</div>
     <main>
       <section>
         <div class="container hero-block">
@@ -345,5 +370,6 @@
         </div>
       </section>
     </footer>
+    <script type="module" src="./js/mobile-menu.js"></script>
   </body>
 </html>
